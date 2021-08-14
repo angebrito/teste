@@ -1,0 +1,447 @@
+[2021-08-13 16:00:12] local.ERROR: SQLSTATE[HY000] [1049] Unknown database 'teste' (SQL: select * from information_schema.tables where table_schema = teste and table_name = migrations and table_type = 'BASE TABLE') {"exception":"[object] (Illuminate\\Database\\QueryException(code: 1049): SQLSTATE[HY000] [1049] Unknown database 'teste' (SQL: select * from information_schema.tables where table_schema = teste and table_name = migrations and table_type = 'BASE TABLE') at C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:692)
+[stacktrace]
+#0 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(652): Illuminate\\Database\\Connection->runQueryCallback('select * from i...', Array, Object(Closure))
+#1 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(360): Illuminate\\Database\\Connection->run('select * from i...', Array, Object(Closure))
+#2 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\MySqlBuilder.php(44): Illuminate\\Database\\Connection->select('select * from i...', Array)
+#3 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\DatabaseMigrationRepository.php(169): Illuminate\\Database\\Schema\\MySqlBuilder->hasTable('migrations')
+#4 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(652): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#5 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(106): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#6 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(77): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#7 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(585): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#8 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(94): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#9 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#10 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#11 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#12 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#13 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(651): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#14 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(136): Illuminate\\Container\\Container->call(Array)
+#15 C:\\Users\\angel\\projetos\\teste\\vendor\\symfony\\console\\Command\\Command.php(299): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#16 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(121): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#17 C:\\Users\\angel\\projetos\\teste\\vendor\\symfony\\console\\Application.php(978): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#18 C:\\Users\\angel\\projetos\\teste\\vendor\\symfony\\console\\Application.php(295): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#19 C:\\Users\\angel\\projetos\\teste\\vendor\\symfony\\console\\Application.php(167): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#20 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(92): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#21 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 C:\\Users\\angel\\projetos\\teste\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 {main}
+
+[previous exception] [object] (PDOException(code: 1049): SQLSTATE[HY000] [1049] Unknown database 'teste' at C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\Connector.php:70)
+[stacktrace]
+#0 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\Connector.php(70): PDO->__construct('mysql:host=127....', 'root', '', Array)
+#1 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\Connector.php(46): Illuminate\\Database\\Connectors\\Connector->createPdoConnection('mysql:host=127....', 'root', '', Array)
+#2 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\MySqlConnector.php(24): Illuminate\\Database\\Connectors\\Connector->createConnection('mysql:host=127....', Array, Array)
+#3 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\ConnectionFactory.php(184): Illuminate\\Database\\Connectors\\MySqlConnector->connect(Array)
+#4 [internal function]: Illuminate\\Database\\Connectors\\ConnectionFactory->Illuminate\\Database\\Connectors\\{closure}()
+#5 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(997): call_user_func(Object(Closure))
+#6 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(1033): Illuminate\\Database\\Connection->getPdo()
+#7 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(426): Illuminate\\Database\\Connection->getReadPdo()
+#8 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(352): Illuminate\\Database\\Connection->getPdoForSelect(true)
+#9 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(685): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('select * from i...', Array)
+#10 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(652): Illuminate\\Database\\Connection->runQueryCallback('select * from i...', Array, Object(Closure))
+#11 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(360): Illuminate\\Database\\Connection->run('select * from i...', Array, Object(Closure))
+#12 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\MySqlBuilder.php(44): Illuminate\\Database\\Connection->select('select * from i...', Array)
+#13 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\DatabaseMigrationRepository.php(169): Illuminate\\Database\\Schema\\MySqlBuilder->hasTable('migrations')
+#14 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(652): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#15 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(106): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#16 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(77): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#17 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(585): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#18 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(94): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#19 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#20 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#21 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#22 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#23 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(651): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#24 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(136): Illuminate\\Container\\Container->call(Array)
+#25 C:\\Users\\angel\\projetos\\teste\\vendor\\symfony\\console\\Command\\Command.php(299): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#26 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(121): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#27 C:\\Users\\angel\\projetos\\teste\\vendor\\symfony\\console\\Application.php(978): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 C:\\Users\\angel\\projetos\\teste\\vendor\\symfony\\console\\Application.php(295): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 C:\\Users\\angel\\projetos\\teste\\vendor\\symfony\\console\\Application.php(167): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(92): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#31 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 C:\\Users\\angel\\projetos\\teste\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#33 {main}
+"} 
+[2021-08-14 00:03:46] local.ERROR: Cannot declare class CreateUsersTable, because the name is already in use {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot declare class CreateUsersTable, because the name is already in use at C:\\Users\\angel\\projetos\\teste\\database\\migrations\\2021_08_13_154023_create_users_table.php:9)
+[stacktrace]
+#0 {main}
+"} 
+[2021-08-14 00:21:18] local.ERROR: SQLSTATE[HY000] [1049] Unknown database 'teste' (SQL: select * from information_schema.tables where table_schema = teste and table_name = migrations and table_type = 'BASE TABLE') {"exception":"[object] (Illuminate\\Database\\QueryException(code: 1049): SQLSTATE[HY000] [1049] Unknown database 'teste' (SQL: select * from information_schema.tables where table_schema = teste and table_name = migrations and table_type = 'BASE TABLE') at C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php:692)
+[stacktrace]
+#0 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(652): Illuminate\\Database\\Connection->runQueryCallback('select * from i...', Array, Object(Closure))
+#1 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(360): Illuminate\\Database\\Connection->run('select * from i...', Array, Object(Closure))
+#2 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\MySqlBuilder.php(44): Illuminate\\Database\\Connection->select('select * from i...', Array)
+#3 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\DatabaseMigrationRepository.php(169): Illuminate\\Database\\Schema\\MySqlBuilder->hasTable('migrations')
+#4 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(652): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#5 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(106): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#6 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(77): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#7 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(585): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#8 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(94): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#9 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#10 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#11 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#12 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#13 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(651): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#14 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(136): Illuminate\\Container\\Container->call(Array)
+#15 C:\\Users\\angel\\projetos\\teste\\vendor\\symfony\\console\\Command\\Command.php(299): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#16 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(121): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#17 C:\\Users\\angel\\projetos\\teste\\vendor\\symfony\\console\\Application.php(978): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#18 C:\\Users\\angel\\projetos\\teste\\vendor\\symfony\\console\\Application.php(295): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#19 C:\\Users\\angel\\projetos\\teste\\vendor\\symfony\\console\\Application.php(167): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#20 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(92): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#21 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#22 C:\\Users\\angel\\projetos\\teste\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#23 {main}
+
+[previous exception] [object] (PDOException(code: 1049): SQLSTATE[HY000] [1049] Unknown database 'teste' at C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\Connector.php:70)
+[stacktrace]
+#0 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\Connector.php(70): PDO->__construct('mysql:host=127....', 'root', '', Array)
+#1 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\Connector.php(46): Illuminate\\Database\\Connectors\\Connector->createPdoConnection('mysql:host=127....', 'root', '', Array)
+#2 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\MySqlConnector.php(24): Illuminate\\Database\\Connectors\\Connector->createConnection('mysql:host=127....', Array, Array)
+#3 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connectors\\ConnectionFactory.php(184): Illuminate\\Database\\Connectors\\MySqlConnector->connect(Array)
+#4 [internal function]: Illuminate\\Database\\Connectors\\ConnectionFactory->Illuminate\\Database\\Connectors\\{closure}()
+#5 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(997): call_user_func(Object(Closure))
+#6 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(1033): Illuminate\\Database\\Connection->getPdo()
+#7 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(426): Illuminate\\Database\\Connection->getReadPdo()
+#8 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(352): Illuminate\\Database\\Connection->getPdoForSelect(true)
+#9 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(685): Illuminate\\Database\\Connection->Illuminate\\Database\\{closure}('select * from i...', Array)
+#10 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(652): Illuminate\\Database\\Connection->runQueryCallback('select * from i...', Array, Object(Closure))
+#11 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Connection.php(360): Illuminate\\Database\\Connection->run('select * from i...', Array, Object(Closure))
+#12 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Schema\\MySqlBuilder.php(44): Illuminate\\Database\\Connection->select('select * from i...', Array)
+#13 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\DatabaseMigrationRepository.php(169): Illuminate\\Database\\Schema\\MySqlBuilder->hasTable('migrations')
+#14 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(652): Illuminate\\Database\\Migrations\\DatabaseMigrationRepository->repositoryExists()
+#15 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(106): Illuminate\\Database\\Migrations\\Migrator->repositoryExists()
+#16 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(77): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->prepareDatabase()
+#17 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Migrations\\Migrator.php(585): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->Illuminate\\Database\\Console\\Migrations\\{closure}()
+#18 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Database\\Console\\Migrations\\MigrateCommand.php(94): Illuminate\\Database\\Migrations\\Migrator->usingConnection(NULL, Object(Closure))
+#19 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Database\\Console\\Migrations\\MigrateCommand->handle()
+#20 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#21 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(93): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#22 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#23 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(651): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#24 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(136): Illuminate\\Container\\Container->call(Array)
+#25 C:\\Users\\angel\\projetos\\teste\\vendor\\symfony\\console\\Command\\Command.php(299): Illuminate\\Console\\Command->execute(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#26 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php(121): Symfony\\Component\\Console\\Command\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Illuminate\\Console\\OutputStyle))
+#27 C:\\Users\\angel\\projetos\\teste\\vendor\\symfony\\console\\Application.php(978): Illuminate\\Console\\Command->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 C:\\Users\\angel\\projetos\\teste\\vendor\\symfony\\console\\Application.php(295): Symfony\\Component\\Console\\Application->doRunCommand(Object(Illuminate\\Database\\Console\\Migrations\\MigrateCommand), Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#29 C:\\Users\\angel\\projetos\\teste\\vendor\\symfony\\console\\Application.php(167): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#30 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(92): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#31 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#32 C:\\Users\\angel\\projetos\\teste\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#33 {main}
+"} 
+[2021-08-14 00:30:02] local.ERROR: Cannot declare class CreateUsersTable, because the name is already in use {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot declare class CreateUsersTable, because the name is already in use at C:\\Users\\angel\\projetos\\teste\\database\\migrations\\2021_08_13_154023_create_users_table.php:9)
+[stacktrace]
+#0 {main}
+"} 
+[2021-08-14 00:31:16] local.ERROR: Cannot declare class CreateUsersTable, because the name is already in use {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot declare class CreateUsersTable, because the name is already in use at C:\\Users\\angel\\projetos\\teste\\database\\migrations\\2021_08_13_154023_create_users_table.php:9)
+[stacktrace]
+#0 {main}
+"} 
+[2021-08-14 00:31:47] local.ERROR: Cannot declare class CreateUsersTable, because the name is already in use {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Cannot declare class CreateUsersTable, because the name is already in use at C:\\Users\\angel\\projetos\\teste\\database\\migrations\\2021_08_13_154023_create_users_table.php:9)
+[stacktrace]
+#0 {main}
+"} 
+[2021-08-14 00:33:01] local.ERROR: Command "make:controlller" is not defined.
+
+Did you mean one of these?
+    make:bindings
+    make:cast
+    make:channel
+    make:command
+    make:component
+    make:controller
+    make:criteria
+    make:entity
+    make:event
+    make:exception
+    make:factory
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:observer
+    make:policy
+    make:presenter
+    make:provider
+    make:repository
+    make:request
+    make:resource
+    make:rest-controller
+    make:rule
+    make:seeder
+    make:test
+    make:transformer
+    make:validator {"exception":"[object] (Symfony\\Component\\Console\\Exception\\CommandNotFoundException(code: 0): Command \"make:controlller\" is not defined.
+
+Did you mean one of these?
+    make:bindings
+    make:cast
+    make:channel
+    make:command
+    make:component
+    make:controller
+    make:criteria
+    make:entity
+    make:event
+    make:exception
+    make:factory
+    make:job
+    make:listener
+    make:mail
+    make:middleware
+    make:migration
+    make:model
+    make:notification
+    make:observer
+    make:policy
+    make:presenter
+    make:provider
+    make:repository
+    make:request
+    make:resource
+    make:rest-controller
+    make:rule
+    make:seeder
+    make:test
+    make:transformer
+    make:validator at C:\\Users\\angel\\projetos\\teste\\vendor\\symfony\\console\\Application.php:682)
+[stacktrace]
+#0 C:\\Users\\angel\\projetos\\teste\\vendor\\symfony\\console\\Application.php(255): Symfony\\Component\\Console\\Application->find('make:controllle...')
+#1 C:\\Users\\angel\\projetos\\teste\\vendor\\symfony\\console\\Application.php(167): Symfony\\Component\\Console\\Application->doRun(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php(92): Symfony\\Component\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#3 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(129): Illuminate\\Console\\Application->run(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#4 C:\\Users\\angel\\projetos\\teste\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#5 {main}
+"} 
+[2021-08-14 01:08:19] local.ERROR: include(C:\Users\angel\projetos\teste\vendor\composer/../../app/Providers/AppServiceProvider.php): Failed to open stream: No such file or directory {"exception":"[object] (ErrorException(code: 0): include(C:\\Users\\angel\\projetos\\teste\\vendor\\composer/../../app/Providers/AppServiceProvider.php): Failed to open stream: No such file or directory at C:\\Users\\angel\\projetos\\teste\\vendor\\composer\\ClassLoader.php:480)
+[stacktrace]
+#0 C:\\Users\\angel\\projetos\\teste\\vendor\\composer\\ClassLoader.php(480): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'include(C:\\\\User...', 'C:\\\\Users\\\\angel\\\\...', 480)
+#1 C:\\Users\\angel\\projetos\\teste\\vendor\\composer\\ClassLoader.php(480): include()
+#2 C:\\Users\\angel\\projetos\\teste\\vendor\\composer\\ClassLoader.php(346): Composer\\Autoload\\includeFile('C:\\\\Users\\\\angel\\\\...')
+#3 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(735): Composer\\Autoload\\ClassLoader->loadClass('App\\\\Providers\\\\A...')
+#4 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(669): Illuminate\\Foundation\\Application->resolveProvider('App\\\\Providers\\\\A...')
+#5 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(75): Illuminate\\Foundation\\Application->register('App\\\\Providers\\\\A...')
+#6 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(649): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#7 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#8 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(237): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#9 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(310): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#10 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(127): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#11 C:\\Users\\angel\\projetos\\teste\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#12 {main}
+"} 
+[2021-08-14 01:11:03] local.ERROR: include(C:\Users\angel\projetos\teste\vendor\composer/../../app/Providers/AppServiceProvider.php): Failed to open stream: No such file or directory {"exception":"[object] (ErrorException(code: 0): include(C:\\Users\\angel\\projetos\\teste\\vendor\\composer/../../app/Providers/AppServiceProvider.php): Failed to open stream: No such file or directory at C:\\Users\\angel\\projetos\\teste\\vendor\\composer\\ClassLoader.php:480)
+[stacktrace]
+#0 C:\\Users\\angel\\projetos\\teste\\vendor\\composer\\ClassLoader.php(480): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'include(C:\\\\User...', 'C:\\\\Users\\\\angel\\\\...', 480)
+#1 C:\\Users\\angel\\projetos\\teste\\vendor\\composer\\ClassLoader.php(480): include()
+#2 C:\\Users\\angel\\projetos\\teste\\vendor\\composer\\ClassLoader.php(346): Composer\\Autoload\\includeFile('C:\\\\Users\\\\angel\\\\...')
+#3 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(735): Composer\\Autoload\\ClassLoader->loadClass('App\\\\Providers\\\\A...')
+#4 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(669): Illuminate\\Foundation\\Application->resolveProvider('App\\\\Providers\\\\A...')
+#5 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(75): Illuminate\\Foundation\\Application->register('App\\\\Providers\\\\A...')
+#6 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(649): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#7 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#8 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(237): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#9 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(310): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#10 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(127): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#11 C:\\Users\\angel\\projetos\\teste\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#12 {main}
+"} 
+[2021-08-14 01:41:56] local.ERROR: include(C:\Users\angel\projetos\teste\vendor\composer/../../app/Providers/AppServiceProvider.php): Failed to open stream: No such file or directory {"exception":"[object] (ErrorException(code: 0): include(C:\\Users\\angel\\projetos\\teste\\vendor\\composer/../../app/Providers/AppServiceProvider.php): Failed to open stream: No such file or directory at C:\\Users\\angel\\projetos\\teste\\vendor\\composer\\ClassLoader.php:480)
+[stacktrace]
+#0 C:\\Users\\angel\\projetos\\teste\\vendor\\composer\\ClassLoader.php(480): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'include(C:\\\\User...', 'C:\\\\Users\\\\angel\\\\...', 480)
+#1 C:\\Users\\angel\\projetos\\teste\\vendor\\composer\\ClassLoader.php(480): include()
+#2 C:\\Users\\angel\\projetos\\teste\\vendor\\composer\\ClassLoader.php(346): Composer\\Autoload\\includeFile('C:\\\\Users\\\\angel\\\\...')
+#3 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(735): Composer\\Autoload\\ClassLoader->loadClass('App\\\\Providers\\\\A...')
+#4 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(669): Illuminate\\Foundation\\Application->resolveProvider('App\\\\Providers\\\\A...')
+#5 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(75): Illuminate\\Foundation\\Application->register('App\\\\Providers\\\\A...')
+#6 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(649): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#7 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#8 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(237): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#9 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(310): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#10 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(127): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#11 C:\\Users\\angel\\projetos\\teste\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#12 {main}
+"} 
+[2021-08-14 01:42:03] local.ERROR: include(C:\Users\angel\projetos\teste\vendor\composer/../../app/Providers/AppServiceProvider.php): Failed to open stream: No such file or directory {"exception":"[object] (ErrorException(code: 0): include(C:\\Users\\angel\\projetos\\teste\\vendor\\composer/../../app/Providers/AppServiceProvider.php): Failed to open stream: No such file or directory at C:\\Users\\angel\\projetos\\teste\\vendor\\composer\\ClassLoader.php:480)
+[stacktrace]
+#0 C:\\Users\\angel\\projetos\\teste\\vendor\\composer\\ClassLoader.php(480): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'include(C:\\\\User...', 'C:\\\\Users\\\\angel\\\\...', 480)
+#1 C:\\Users\\angel\\projetos\\teste\\vendor\\composer\\ClassLoader.php(480): include()
+#2 C:\\Users\\angel\\projetos\\teste\\vendor\\composer\\ClassLoader.php(346): Composer\\Autoload\\includeFile('C:\\\\Users\\\\angel\\\\...')
+#3 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(735): Composer\\Autoload\\ClassLoader->loadClass('App\\\\Providers\\\\A...')
+#4 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(669): Illuminate\\Foundation\\Application->resolveProvider('App\\\\Providers\\\\A...')
+#5 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(75): Illuminate\\Foundation\\Application->register('App\\\\Providers\\\\A...')
+#6 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(649): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#7 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#8 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(237): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#9 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(310): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#10 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(127): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#11 C:\\Users\\angel\\projetos\\teste\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#12 {main}
+"} 
+[2021-08-14 01:43:34] local.ERROR: include(C:\Users\angel\projetos\teste\vendor\composer/../../app/Providers/AppServiceProvider.php): Failed to open stream: No such file or directory {"exception":"[object] (ErrorException(code: 0): include(C:\\Users\\angel\\projetos\\teste\\vendor\\composer/../../app/Providers/AppServiceProvider.php): Failed to open stream: No such file or directory at C:\\Users\\angel\\projetos\\teste\\vendor\\composer\\ClassLoader.php:480)
+[stacktrace]
+#0 C:\\Users\\angel\\projetos\\teste\\vendor\\composer\\ClassLoader.php(480): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'include(C:\\\\User...', 'C:\\\\Users\\\\angel\\\\...', 480)
+#1 C:\\Users\\angel\\projetos\\teste\\vendor\\composer\\ClassLoader.php(480): include()
+#2 C:\\Users\\angel\\projetos\\teste\\vendor\\composer\\ClassLoader.php(346): Composer\\Autoload\\includeFile('C:\\\\Users\\\\angel\\\\...')
+#3 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(735): Composer\\Autoload\\ClassLoader->loadClass('App\\\\Providers\\\\A...')
+#4 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(669): Illuminate\\Foundation\\Application->resolveProvider('App\\\\Providers\\\\A...')
+#5 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(75): Illuminate\\Foundation\\Application->register('App\\\\Providers\\\\A...')
+#6 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(649): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#7 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#8 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(237): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#9 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(310): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#10 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(127): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#11 C:\\Users\\angel\\projetos\\teste\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#12 {main}
+"} 
+[2021-08-14 01:47:59] local.ERROR: include(C:\Users\angel\projetos\teste\vendor\composer/../../app/Providers/AppServiceProvider.php): Failed to open stream: No such file or directory {"exception":"[object] (ErrorException(code: 0): include(C:\\Users\\angel\\projetos\\teste\\vendor\\composer/../../app/Providers/AppServiceProvider.php): Failed to open stream: No such file or directory at C:\\Users\\angel\\projetos\\teste\\vendor\\composer\\ClassLoader.php:480)
+[stacktrace]
+#0 C:\\Users\\angel\\projetos\\teste\\vendor\\composer\\ClassLoader.php(480): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'include(C:\\\\User...', 'C:\\\\Users\\\\angel\\\\...', 480)
+#1 C:\\Users\\angel\\projetos\\teste\\vendor\\composer\\ClassLoader.php(480): include()
+#2 C:\\Users\\angel\\projetos\\teste\\vendor\\composer\\ClassLoader.php(346): Composer\\Autoload\\includeFile('C:\\\\Users\\\\angel\\\\...')
+#3 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(735): Composer\\Autoload\\ClassLoader->loadClass('App\\\\Providers\\\\A...')
+#4 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(669): Illuminate\\Foundation\\Application->resolveProvider('App\\\\Providers\\\\A...')
+#5 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(75): Illuminate\\Foundation\\Application->register('App\\\\Providers\\\\A...')
+#6 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(649): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#7 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#8 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(237): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#9 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(310): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#10 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(127): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#11 C:\\Users\\angel\\projetos\\teste\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#12 {main}
+"} 
+[2021-08-14 01:48:28] local.ERROR: include(C:\Users\angel\projetos\teste\vendor\composer/../../app/Providers/AppServiceProvider.php): Failed to open stream: No such file or directory {"exception":"[object] (ErrorException(code: 0): include(C:\\Users\\angel\\projetos\\teste\\vendor\\composer/../../app/Providers/AppServiceProvider.php): Failed to open stream: No such file or directory at C:\\Users\\angel\\projetos\\teste\\vendor\\composer\\ClassLoader.php:480)
+[stacktrace]
+#0 C:\\Users\\angel\\projetos\\teste\\vendor\\composer\\ClassLoader.php(480): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'include(C:\\\\User...', 'C:\\\\Users\\\\angel\\\\...', 480)
+#1 C:\\Users\\angel\\projetos\\teste\\vendor\\composer\\ClassLoader.php(480): include()
+#2 C:\\Users\\angel\\projetos\\teste\\vendor\\composer\\ClassLoader.php(346): Composer\\Autoload\\includeFile('C:\\\\Users\\\\angel\\\\...')
+#3 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(735): Composer\\Autoload\\ClassLoader->loadClass('App\\\\Providers\\\\A...')
+#4 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(669): Illuminate\\Foundation\\Application->resolveProvider('App\\\\Providers\\\\A...')
+#5 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(75): Illuminate\\Foundation\\Application->register('App\\\\Providers\\\\A...')
+#6 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(649): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#7 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#8 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(237): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#9 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(310): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#10 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(127): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#11 C:\\Users\\angel\\projetos\\teste\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#12 {main}
+"} 
+[2021-08-14 01:51:30] local.ERROR: include(C:\Users\angel\projetos\teste\vendor\composer/../../app/Providers/AppServiceProvider.php): Failed to open stream: No such file or directory {"exception":"[object] (ErrorException(code: 0): include(C:\\Users\\angel\\projetos\\teste\\vendor\\composer/../../app/Providers/AppServiceProvider.php): Failed to open stream: No such file or directory at C:\\Users\\angel\\projetos\\teste\\vendor\\composer\\ClassLoader.php:480)
+[stacktrace]
+#0 C:\\Users\\angel\\projetos\\teste\\vendor\\composer\\ClassLoader.php(480): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'include(C:\\\\User...', 'C:\\\\Users\\\\angel\\\\...', 480)
+#1 C:\\Users\\angel\\projetos\\teste\\vendor\\composer\\ClassLoader.php(480): include()
+#2 C:\\Users\\angel\\projetos\\teste\\vendor\\composer\\ClassLoader.php(346): Composer\\Autoload\\includeFile('C:\\\\Users\\\\angel\\\\...')
+#3 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(735): Composer\\Autoload\\ClassLoader->loadClass('App\\\\Providers\\\\A...')
+#4 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(669): Illuminate\\Foundation\\Application->resolveProvider('App\\\\Providers\\\\A...')
+#5 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(75): Illuminate\\Foundation\\Application->register('App\\\\Providers\\\\A...')
+#6 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(649): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#7 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#8 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(237): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#9 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(310): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#10 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(127): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#11 C:\\Users\\angel\\projetos\\teste\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#12 {main}
+"} 
+[2021-08-14 01:52:31] local.ERROR: include(C:\Users\angel\projetos\teste\vendor\composer/../../app/Providers/AppServiceProvider.php): Failed to open stream: No such file or directory {"exception":"[object] (ErrorException(code: 0): include(C:\\Users\\angel\\projetos\\teste\\vendor\\composer/../../app/Providers/AppServiceProvider.php): Failed to open stream: No such file or directory at C:\\Users\\angel\\projetos\\teste\\vendor\\composer\\ClassLoader.php:480)
+[stacktrace]
+#0 C:\\Users\\angel\\projetos\\teste\\vendor\\composer\\ClassLoader.php(480): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'include(C:\\\\User...', 'C:\\\\Users\\\\angel\\\\...', 480)
+#1 C:\\Users\\angel\\projetos\\teste\\vendor\\composer\\ClassLoader.php(480): include()
+#2 C:\\Users\\angel\\projetos\\teste\\vendor\\composer\\ClassLoader.php(346): Composer\\Autoload\\includeFile('C:\\\\Users\\\\angel\\\\...')
+#3 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(735): Composer\\Autoload\\ClassLoader->loadClass('App\\\\Providers\\\\A...')
+#4 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(669): Illuminate\\Foundation\\Application->resolveProvider('App\\\\Providers\\\\A...')
+#5 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(75): Illuminate\\Foundation\\Application->register('App\\\\Providers\\\\A...')
+#6 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(649): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#7 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#8 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(237): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#9 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(310): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#10 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(127): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#11 C:\\Users\\angel\\projetos\\teste\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#12 {main}
+"} 
+[2021-08-14 01:54:38] local.ERROR: include(C:\Users\angel\projetos\teste\vendor\composer/../../app/Providers/AppServiceProvider.php): Failed to open stream: No such file or directory {"exception":"[object] (ErrorException(code: 0): include(C:\\Users\\angel\\projetos\\teste\\vendor\\composer/../../app/Providers/AppServiceProvider.php): Failed to open stream: No such file or directory at C:\\Users\\angel\\projetos\\teste\\vendor\\composer\\ClassLoader.php:480)
+[stacktrace]
+#0 C:\\Users\\angel\\projetos\\teste\\vendor\\composer\\ClassLoader.php(480): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'include(C:\\\\User...', 'C:\\\\Users\\\\angel\\\\...', 480)
+#1 C:\\Users\\angel\\projetos\\teste\\vendor\\composer\\ClassLoader.php(480): include()
+#2 C:\\Users\\angel\\projetos\\teste\\vendor\\composer\\ClassLoader.php(346): Composer\\Autoload\\includeFile('C:\\\\Users\\\\angel\\\\...')
+#3 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(735): Composer\\Autoload\\ClassLoader->loadClass('App\\\\Providers\\\\A...')
+#4 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(669): Illuminate\\Foundation\\Application->resolveProvider('App\\\\Providers\\\\A...')
+#5 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(75): Illuminate\\Foundation\\Application->register('App\\\\Providers\\\\A...')
+#6 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(649): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#7 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#8 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(237): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#9 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(310): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#10 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(127): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#11 C:\\Users\\angel\\projetos\\teste\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#12 {main}
+"} 
+[2021-08-14 02:12:43] local.ERROR: Class "App\Providers\AppServiceProvider" not found {"exception":"[object] (Error(code: 0): Class \"App\\Providers\\AppServiceProvider\" not found at C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php:208)
+[stacktrace]
+#0 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(144): Illuminate\\Foundation\\ProviderRepository->createProvider('App\\\\Providers\\\\A...')
+#1 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(61): Illuminate\\Foundation\\ProviderRepository->compileManifest(Array)
+#2 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(649): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#3 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#4 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(237): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#5 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(310): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#6 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(127): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#7 C:\\Users\\angel\\projetos\\teste\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 {main}
+"} 
+[2021-08-14 02:12:56] local.ERROR: Class "App\Providers\AppServiceProvider" not found {"exception":"[object] (Error(code: 0): Class \"App\\Providers\\AppServiceProvider\" not found at C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php:208)
+[stacktrace]
+#0 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(144): Illuminate\\Foundation\\ProviderRepository->createProvider('App\\\\Providers\\\\A...')
+#1 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(61): Illuminate\\Foundation\\ProviderRepository->compileManifest(Array)
+#2 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(649): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#3 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#4 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(237): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#5 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(310): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#6 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(127): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#7 C:\\Users\\angel\\projetos\\teste\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 {main}
+"} 
+[2021-08-14 02:14:25] local.ERROR: Class "App\Providers\EventServiceProvider" not found {"exception":"[object] (Error(code: 0): Class \"App\\Providers\\EventServiceProvider\" not found at C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php:208)
+[stacktrace]
+#0 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(144): Illuminate\\Foundation\\ProviderRepository->createProvider('App\\\\Providers\\\\E...')
+#1 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(61): Illuminate\\Foundation\\ProviderRepository->compileManifest(Array)
+#2 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(649): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#3 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterProviders.php(17): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#4 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(237): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#5 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(310): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#6 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(127): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#7 C:\\Users\\angel\\projetos\\teste\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 {main}
+"} 
+[2021-08-14 02:14:45] local.ERROR: Method Illuminate\Routing\Route::apiResource does not exist. {"exception":"[object] (BadMethodCallException(code: 0): Method Illuminate\\Routing\\Route::apiResource does not exist. at C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Macroable\\Traits\\Macroable.php:77)
+[stacktrace]
+#0 C:\\Users\\angel\\projetos\\teste\outes\\api.php(5): Illuminate\\Routing\\Route::__callStatic('apiResource', Array)
+#1 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\RouteFileRegistrar.php(35): require('C:\\\\Users\\\\angel\\\\...')
+#2 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(425): Illuminate\\Routing\\RouteFileRegistrar->register('C:\\\\Users\\\\angel\\\\...')
+#3 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(382): Illuminate\\Routing\\Router->loadRoutes('C:\\\\Users\\\\angel\\\\...')
+#4 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\RouteRegistrar.php(135): Illuminate\\Routing\\Router->group(Array, 'C:\\\\Users\\\\angel\\\\...')
+#5 C:\\Users\\angel\\projetos\\teste\\app\\Providers\\RouteServiceProvider.php(44): Illuminate\\Routing\\RouteRegistrar->group('C:\\\\Users\\\\angel\\\\...')
+#6 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): App\\Providers\\RouteServiceProvider->App\\Providers\\{closure}()
+#7 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#8 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(81): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#9 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Object(Closure), Object(Closure))
+#10 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(651): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Object(Closure), Array, NULL)
+#11 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Support\\Providers\\RouteServiceProvider.php(120): Illuminate\\Container\\Container->call(Object(Closure))
+#12 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Support\\Providers\\RouteServiceProvider.php(45): Illuminate\\Foundation\\Support\\Providers\\RouteServiceProvider->loadRoutes()
+#13 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(36): Illuminate\\Foundation\\Support\\Providers\\RouteServiceProvider->Illuminate\\Foundation\\Support\\Providers\\{closure}()
+#14 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php(40): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#15 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(81): Illuminate\\Container\\Util::unwrapIfClosure(Object(Closure))
+#16 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(37): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Object(Closure), Object(Closure))
+#17 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(651): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Object(Closure), Array, NULL)
+#18 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\ServiceProvider.php(113): Illuminate\\Container\\Container->call(Object(Closure))
+#19 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(917): Illuminate\\Support\\ServiceProvider->callBootedCallbacks()
+#20 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(895): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\RouteServiceProvider))
+#21 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\RouteServiceProvider), 24)
+#22 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(896): array_walk(Array, Object(Closure))
+#23 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#24 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(237): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#25 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(310): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#26 C:\\Users\\angel\\projetos\\teste\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(127): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#27 C:\\Users\\angel\\projetos\\teste\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#28 {main}
+"} 
